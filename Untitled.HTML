@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta name="google-site-verification" content="DrGWjAShpqB0xnhoD2samtd0d9MLJkBqXLm66ekVFqI" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HARISH POETRY</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8f3eb;
+            color: #49372d;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: #fffdf8;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #49372d;
+            margin-left: 20px;
+            font-size: 19px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #b58a57;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+
+            background:
+            linear-gradient(rgba(30,22,18,.55),rgba(30,22,18,.65)),
+            url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=80')
+            center/cover;
+
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 8vw, 85px);
+            font-weight: 500;
+            letter-spacing: 4px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .hero a {
+            margin-top: 35px;
+            padding: 13px 30px;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .hero a:hover {
+            background: white;
+            color: #49372d;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .intro h2,
+        .poems h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+        .intro p {
+            font-size: 23px;
+            line-height: 1.7;
+            margin-top: 20px;
+            color: #887568;
+        }
+
+        .poems {
+            max-width: 850px;
+            margin: auto;
+            padding: 30px 25px 80px;
+        }
+
+        .poems h2 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        ol {
+            padding-left: 35px;
+        }
+
+        li {
+            padding: 20px 10px;
+            border-bottom: 1px solid #e8dbca;
+            font-size: 25px;
+        }
+
+        li::marker {
+            color: #b58a57;
+        }
+
+        li a {
+            text-decoration: none;
+            color: #49372d;
+            transition: padding-left 0.3s, color 0.3s;
+        }
+
+        li a:hover {
+            color: #b58a57;
+            padding-left: 10px;
+        }
+
+        .poem {
+            max-width: 780px;
+            margin: 40px auto;
+            padding: 55px 25px;
+            text-align: center;
+            background: #fffdf8;
+            border: 1px solid #e8dbca;
+            box-shadow: 0 10px 35px rgba(80,60,40,.08);
+            scroll-margin-top: 90px;
+        }
+
+        .poem h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 35px;
+            margin-bottom: 25px;
+        }
+
+        .poem .date {
+            color: #b58a57;
+            font-size: 17px;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .poem p {
+            font-size: 24px;
+            line-height: 1.9;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 22px;
+            border: 1px solid #b58a57;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #9a7049;
+            font-size: 19px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .back:hover {
+            background: #b58a57;
+            color: #fffdf8;
+        }
+
+        footer {
+            background: #35271f;
+            color: #fff4e6;
+            text-align: center;
+            padding: 45px 20px;
+            font-size: 19px;
+        }
+
+        @media(max-width:600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 17px;
+            }
+
+            .poem {
+                margin: 25px 12px;
+                padding: 40px 15px;
+            }
+
+            .poem p {
+                font-size: 20px;
+            }
+
+            li {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">HARISH POETRY</div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#poems">Poems</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <h1>HARISH POETRY</h1>
+        <p>Some feelings are too beautiful to remain unspoken.</p>
+        <a href="#poems">Explore the Collection</a>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro" id="about">
+        <h2>A Little World of Poetry</h2>
+        <p>
+            For the feelings we cannot explain,<br>
+            the moments we cannot forget,<br>
+            and the words we never said.
+        </p>
+    </section>
+
+    <!-- CLICKABLE ORDERED LIST -->
+    <section class="poems" id="poems">
+        <h2>The Poetry Collection</h2>
+        <ol>
+            <li><a href="#hindi-poem1">बंदगी (Bandagi)</a></li>
+            <li><a href="#hindi-poem2">तेरी रजा (Teri Raza)</a></li>
+            <li><a href="#hindi-poem3">तन्हाई और दर्द (Tanhai Aur Dard)</a></li>
+            <li><a href="#hindi-poem4">रिश्ता (Rishta)</a></li>
+            <li><a href="#hindi-poem5">इतिहास (Itihas)</a></li>
+            <li><a href="#hindi-poem6">विडंबना (Vidambana)</a></li>
+            <li><a href="#hindi-poem7">बड़प्पन (Badappan)</a></li>
+            <li><a href="#hindi-poem8">महान (Mahan)</a></li>
+            <li><a href="#hindi-poem9">न्याय (Nyaya)</a></li>
+            <li><a href="#hindi-poem10">सोच (Soch)</a></li>
+            <li><a href="#hindi-poem11">भावना (Bhavna)</a></li>
+            <li><a href="#hindi-poem12">मै जा रहा हूँ (Main Ja Raha Hoon)</a></li>
+        </ol>
+    </section>
+
+    <!-- HINDI POEMS SECTION -->
+
+    <!-- HINDI POEM 1 -->
+    <section class="poem" id="hindi-poem1">
+        <h2>बंदगी</h2>
+        <div class="date">1.1.2011</div>
+        <p>
+            बंदगी है वो, ...सतगुरू ने कही<br>
+            बन्दे ने मानी,<br>
+            दूर से देखे तो सभी बंदगी में लगे है,<br>
+            सच क्या है, बंदगी करने वाले ही जानते है,<br>
+            असल बंदगी है उसकी,<br>
+            जो लगा है बंदगी में जानने के बाद भी उस सच को,<br>
+            खो बैठा वो बंदगी,<br>
+            जो भूल बैठा सच को, जानकर उस सच को,<br>
+            भूल जाता है वो कि जानने के लायक भी,<br>
+            बनाया है उस बंदगी ने,<br>
+            सोचता है वो बंदगी है मुझसे,<br>
+            बंदगी नहीं है तुझसे, यह तेरी उस बंदगी का असर है कि कायम है तू यह सोचकर भी,
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 2 -->
+    <section class="poem" id="hindi-poem2">
+        <h2>तेरी रजा</h2>
+        <div class="date">10.03.2011</div>
+        <p>
+            या खुदा ना दे दगा,<br>
+            रहने दे कम से कम एक ऐसी वजह, कि मान सके हम तुझे खुदा,<br><br>
+            खुदा कोई वो नहीं जो दिखता है,<br>
+            खुदा वो है जिसे हम मानते है,<br>
+            खुदाई वो नहीं जो बरसती है,<br>
+            खुदाई वो है जो हम सोचते है,<br>
+            जो हम सोचते है, उस खुदा के बारे मे, वही खुदा हम पर बरसाता है ।।<br><br>
+            सुख दुख कुछ ना होता है,<br>
+            है तो सिर्फ उस सोच के दो पहलू,<br>
+            रहमत केवल यह नहीं कि दुख ना आए,<br>
+            रहमत यह भी है कि दुख को सह पाए,<br>
+            दुख को हम सह पाए, यही तो रजा है,<br>
+            जो रजा में है, उसी के पास तो खुदा है ।<br><br>
+            पैदा हुआ तेरी रजा थी,<br>
+            पला बढा तेरी रजा थी,<br>
+            संस्कार जो मुझे मिले तेरी रजा था,<br>
+            कोई मुझसे खुश है, तेरी रजा है,<br>
+            कोई मुझसे खफा है, तेरी रजा है,<br><br>
+            जो लिख रहा हूँ तेरी रजा है,<br>
+            तेरी रजा को मान रहा हूँ, तेरी रजा है,<br>
+            मै तेरी रजा में हूँ, यही तो रहमत है ।
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 3 -->
+    <section class="poem" id="hindi-poem3">
+        <h2>तन्हाई और दर्द</h2>
+        <div class="date">14.04.2011</div>
+        <p>
+            किसी के दिल को ना छेडो,<br>
+            दुख होगा यह जानकर कि, वह तुमसे ज्यादा दुखी है ।<br>
+            किसी के चेहरे को देखकर मत लगाओ अंदाजा,<br>
+            हर चमकने वाली चीज सोना नहीं होती,<br>
+            और सोने की हर चीज के पीछे एक दर्दनाक कहानी है ।।<br><br>
+            जो दयावान है, उसने जरूर दुख देखे है,<br>
+            जिसमें प्यार है, उसने तन्हाई देखी है,<br>
+            वह सुख में भी दुखी हो जाता है,<br>
+            दूजे के दुख देखकर,<br>
+            वह दुख में भी सुख लेता है,<br>
+            उस दुखी के दुख को कम करके ।।<br><br>
+            जिसमें प्यार है, उसने तन्हाई देखी है,<br>
+            वह प्यार को प्यार करता है,<br>
+            चाहे झेलनी पडे उसे तन्हाइयां,<br>
+            झेलकर तन्हाई, करता है वो मजबूर उनको,<br>
+            देने को तवज्जो उनके प्यार को,
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 4 -->
+    <section class="poem" id="hindi-poem4">
+        <h2>रिश्ता</h2>
+        <div class="date">24.04.2011</div>
+        <p>
+            रिश्ता उम्मीद, प्यार और जिम्मेदारी का नाम है,<br>
+            रिश्ता परस्पर होता है, अकेला नहीं,<br>
+            एक प्यार भी नहीं कर सकता,<br>
+            दूजे के जिम्मेदारी से भागने पर,<br>
+            एक जिम्मेदारी भी नहीं निभा सकता,<br>
+            आपस में प्यार न होने पर,<br>
+            उडने की दौड में, टूटने लगते है रिश्ते,<br>
+            पैदा होती है उडने की चाह जबकि, उन्ही रिश्तो के कारण,<br>
+            बने रिश्ते उनसे उनकी सहमति लेकर,<br>
+            हम आज भी वैसे है,<br>
+            बस वो खफा है हमारे दूसरे रिश्तो से,<br>
+            सोचता हूँ कहां गल्त हूँ मै, नही सोच पाता क्योंकि गल्त तो वो भी नही है,<br>
+            गल्त तो वो भी नही है, बस भूल बैठे वो अपनी सहमति को,<br>
+            वो चाहते है वो, जो उन्होने सोचा था,<br>
+            हम तो यह जानते है कि वह सोच हमारी देन नही है,<br>
+            वो रहें कायम अपनी सोच पर, गम नही,<br>
+            क्यो बदलते है उस सोच को जो हमारे रिश्ते की बुनियाद है ।।
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 5 -->
+    <section class="poem" id="hindi-poem5">
+        <h2>इतिहास</h2>
+        <div class="date">1.08.2011 at Bombay 1.28 AM Meera Road.</div>
+        <p>
+            इतिहास अधूरा है,<br>
+            यह उतना ही है जितना हमे दिखाया गया है,<br>
+            सच नही है यह, हमे बेवकूफ बनाया गया है,<br>
+            इतिहास सिर्फ उतना लिखा जाता है, जितना लिखने वाले को लगता सही है,<br>
+            कौन जाने कि उसका सही कितना सही है,<br>
+            दिल से पूछें हम कि कितना हम देख चुके है,<br>
+            और लिखने वाले ने कितना सही अब तक लिखा है,<br>
+            तारीफ लिखी जाती है उसकी, जिसको वह चाहता है,<br>
+            दुश्मन अपने के तो उसने भी बरखिलाफ लिखा है,<br>
+            जरूरी तो नही कि सबको अच्छा लगे जो उसको लगता था,<br>
+            किसी ने बताया आज तक कि गौडसे को गांधी क्यों बुरा लगता था ।
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 6 -->
+    <section class="poem" id="hindi-poem6">
+        <h2>विडंबना</h2>
+        <div class="date">1.08.2011</div>
+        <p>
+            हम वो चाहते है जो यहां नही मिलता,<br>
+            और कहीं हम जाना नही चाहते,<br>
+            शहक हमे भी पढने लिखने का है,<br>
+            लेकिन पाठशाला तो हम जाना नही चाहते,<br><br>
+            इच्छाओ के विरोधाभास में, खो बैठते है हम अपनी खुशी,<br>
+            इक पूरी होती है, दस छूट जाती है ।।<br>
+            खुद को तोड कर पढाते है अपने बच्चे को इस उम्मीद में,<br>
+            बनेगा हमारे बुढापे की लाठी,<br>
+            सहारा बनने के लिए जगह मिलती है उसे वहां,<br>
+            जंहा हम किसी भी हालात में जाना नही चाहते,<br>
+            खुश हम भी है, और वो भी है कि जो हमने चाहा वह बना,<br>
+            दुखी हम भी है, और वो भी है कि फिर भी बुढापे की लाठी नही बना,<br>
+            विडंबना यही है कि अपने साधनो को देख कर नही बनाई अपनी इच्छाए,<br>
+            इच्छाओं की उलझनो को हम सभी विधी का विधान कहते है ।
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 7 -->
+    <section class="poem" id="hindi-poem7">
+        <h2>बड़प्पन</h2>
+        <div class="date">1.08.2011</div>
+        <p>
+            मै रोज छोड जाता हूँ, फिर बुला लेता है तूं,<br>
+            मै रोज गिर जाता हूँ, फिर से उठा लेता है तूं,<br>
+            लगता है मुझको खडा हूँ मै अपने पैरों पर,
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 8 -->
+    <section class="poem" id="hindi-poem8">
+        <h2>महान</h2>
+        <p>
+            मै महान हूँ,<br>
+            विचार जो मुझमें आते है, इसके अलावा अन्य विचार किसी को भी ना आते है,<br>
+            हर महान शख्शियत को मैने सुना,<br>
+            मैने सुना उनको, उनके मन में भी केवल वही विचार आते है,<br><br>
+            मै महान हूँ,<br>
+            यह केवल मै जानता हूँ,<br>
+            वो महान है, यह सभी जानते है,<br>
+            फर्क क्या है,<br>
+            फर्क है सिर्फ सोच का,<br>
+            सोच का जिसे वह लोग 'दुनिया की समझ कहते है'<br>
+            और मै 'दुनिया को धोखा देना' समझता हूँ ।<br>
+            जिसे वह लोग अपना सकते है,<br>
+            मै नही अपना सकता,<br>
+            इसीलिए मै महान हूँ ।<br><br>
+            बहुत से मुझ जैसे महान है, जो पैदा होते है और अपनी महानता में ही मर जाते है,
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 9 -->
+    <section class="poem" id="hindi-poem9">
+        <h2>न्याय</h2>
+        <p>
+            हर न्याय एक अन्याय करता है,<br>
+            क्योंकि दूनिया गोल है,<br>
+            राज्य सदा कल्याणकारी होता है,<br>
+            और सबके लिए होता है,<br>
+            जुर्म करने पर वह एक को सजा देकर न्याय करता है,<br>
+            लेकिन अपराधी पर आश्रित पक्ष से अनजाने में अन्याय कर जाता है,<br>
+            प्यार करने वाले एक दूजे के साथ न्याय करते है,<br>
+            लेकिन जिस समाज ने उन्हे इस लायक बनाया उनसे अन्याय करते है,<br>
+            आनार किलींग करके अपनी जात धर्म के साथ न्याय करते है,<br>
+            लेकिन प्रेमी जोडे के साथ अन्याय करते है ।<br>
+            उच्चतम न्यायलय अपने पहले गल्त निर्णय को बदल कर न्याय करता है,<br>
+            लेकिन जो पक्ष उस निर्णय से प्रभावित हो चुके है को कुछ ना देकर अन्याय करता है,
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 10 -->
+    <section class="poem" id="hindi-poem10">
+        <h2>सोच</h2>
+        <p>
+            मै रोज सोचता हूँ कि मै उस जैसा बनू,<br>
+            कोई और सोचता है कि वह मुझ जैसा बने,<br>
+            यही सोच हम सब की परेषानी है,<br>
+            भगत सिंह ने भी सोचा था कि वह गांधी बने,<br>
+            गांधी ने सोचा था कि वह राजा राम मोहन राय बने,<br>
+            कोई किसी जैसा नही बन सकता, बनता वही है जो वह खुद होता है,
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 11 -->
+    <section class="poem" id="hindi-poem11">
+        <h2>भावना</h2>
+        <div class="date">30.06.2010</div>
+        <p>
+            भीड से भरी बस में खडी थी वह सकपकाई,<br>
+            सोच रही थी वह क्या है जिंदगी की सच्चाई,<br>
+            कल के समारोह की जब घटना उसे याद आई,<br><br>
+            समारोह में वह सबकी नजर में थी,<br>
+            बस में वह सबकी गिरफ़्त में थी,<br>
+            समारोह में हर कोई उसे छूना चाहता था,<br>
+            बस में हर कोई उसे छू रहा था,<br>
+            कल सभी झटके खाकर गिर रहे थे,<br>
+            आज सभी झटको का आनंद ले रहे थे,<br>
+            वह कल भी खुश थी, वह आज भी खुश है,<br>
+            मै कल भी दुखी था, मै आज भी दुखी हूँ ।
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- HINDI POEM 12 -->
+    <section class="poem" id="hindi-poem12">
+        <h2>मै जा रहा हूँ</h2>
+        <div class="date">14.11.2010</div>
+        <p>
+            मै जा रहा हूँ ।<br>
+            मै जा रहा हूँ, क्योंकि मै दुखी हूँ,<br>
+            मै दुखी हूँ क्योंकि वो दुखी है,<br>
+            वो दुखी है क्योंकि मै यहां पर हूँ,<br>
+            इसलिए मै जा रहा हूँ ।<br><br>
+            वो दुखी है क्योंकि वह मुझे चाहते है,<br>
+            वो मुझे चाहते है क्योंकि मै उन्हे चाहते है,<br>
+            मै उन्हे चाहता हूँ क्योंकि वो मेरे लिए दुखी है,<br>
+            इसलिए मै जा रहा हूँ ।<br><br>
+            वो मेरे लिए दुखी है, क्योंकि वो बेबस है,<br>
+            वो बेबस है, क्योंकि उन्हे समाज की समझ है,<br>
+            उन्हे समाज की समझ है, क्योंकि उन पर उनकी जिम्मेदारी है,<br>
+            उन पर उनकी भी जिम्मेदारी है जो नासमझ है,<br>
+            इसलिए मै जा रहा हूँ ।<br><br>
+            जो नासमझ है वो भी मेरे अपने है,<br>
+            वो भी मेरे अपने है पर उनके अलग सपने है,<br>
+            उनके अलग सपने है, पर वो नासमझ उनके सपने है,<br>
+            वो नासमझ उनके सपने है जो मेरे अपने है,<br>
+            इसलिए मै जा रहा हूँ ।
+        </p>
+        <a href="#poems" class="back">↑ Back to Collection</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p style="font-family:'Playfair Display';font-size:27px;">
+            HARISH POETRY
+        </p>
+        <p>Words from the heart, memories for a lifetime.</p>
+        <p style="margin-top:20px;font-size:15px;">
+            © 2026 HARISH POETRY | All Rights Reserved
+        </p>
+    </footer>
+
+</body>
+</html>
